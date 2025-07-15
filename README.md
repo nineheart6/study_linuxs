@@ -1,7 +1,9 @@
 # study_linuxs
 ## powershell (GUI & CLI)
-연습 글을 올립니다.
-- 첫째번째
-- 두번째
+연습글을 올립니다.
+- Searching Command : [명령어](codes/10_powershell.sh)
+- file & directory Command : [명령어](codes/20_controll_file_dir_powershell.sh)
 
-[안내글](codes/10_powershell.sh)
+## Quests
+- Searching Command Linux : [명령어](codes/cd_pwd_ls.sh)
+
