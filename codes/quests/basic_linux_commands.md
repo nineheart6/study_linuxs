@@ -118,6 +118,10 @@ Mode                 LastWriteTime         Length Name
 
 ### 문제 2-2: 파일 내용 확인
 * hello.txt 파일의 내용을 출력하세요
+```shell
+PS C:\Develops\Quests\powershell_practice\documents>cat hello.txt
+Hello PowerShell!
+```
 * 현재 폴더의 모든 파일과 폴더 목록을 자세히 확인하세요
 ### 문제 2-3: 파일 복사
 * documents/hello.txt 파일을 backup 폴더에 복사하세요
@@ -295,14 +299,43 @@ PS C:\Develops\Quests\my_project> rm tests
 ### 문제 5-3: 최종 확인
 * my_project 폴더의 모든 하위 내용을 재귀적으로 확인하세요
 ```shell
-PS C:\Develops\Quests\my_project> tree
-폴더 PATH의 목록입니다.
-볼륨 일련 번호는 52B6-33C5입니다.
-C:.
-├─build
-├─docs
-└─src
+PS C:\Develops\Quests\my_project> ls -r
+
+
+    디렉터리: C:\Develops\Quests\my_project
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----      2025-07-15   오후 4:20                build
+d-----      2025-07-15   오후 4:20                docs
+d-----      2025-07-15   오후 4:15                src
+
+
+    디렉터리: C:\Develops\Quests\my_project\build
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2025-07-15   오후 4:15             46 main.py
+
+
+    디렉터리: C:\Develops\Quests\my_project\docs
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2025-07-15   오후 4:16             42 project_info.txt
+
+
+    디렉터리: C:\Develops\Quests\my_project\src
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2025-07-15   오후 4:15             46 main.py
 ```
+
 * 각 폴더로 이동하여 파일 내용을 확인하세요
 ```shell
 PS C:\Develops\Quests\my_project> cd C:\Develops\Quests\my_project\build
