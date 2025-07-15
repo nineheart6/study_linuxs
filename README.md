@@ -8,3 +8,4 @@
 
 - Searching Command Linux : [명령어](codes/cd_pwd_ls.sh)
 
+- basic_powershell_commands : [명령어](codes/quests/basic_linux_commands.md)
