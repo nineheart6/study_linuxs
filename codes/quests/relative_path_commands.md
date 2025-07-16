@@ -234,7 +234,7 @@ cp ./config/* ./src/
 1. 전체 프로젝트를 ../../project_backup/으로 복사하시오.
 ```shell
 #cp: cannot copy a directory, '../../../project/', into itself, '../../project_backup/project'
-#스스로를 계속 복사하게 되므로 성립안됨.
+#cp는 재귀적으로 작동해서 스스로를 계속 복사하게 되므로 성립안됨.
 ```
 2. utils/ 디렉토리의 모든 .py 파일을 현재 디렉토리의 models/ 디렉토리로 복사하시오.
 ```shell
