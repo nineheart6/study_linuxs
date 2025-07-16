@@ -233,8 +233,13 @@ cp ./config/* ./src/
 현재 위치가 ~/practice/project/src/main/일 때:
 1. 전체 프로젝트를 ../../project_backup/으로 복사하시오.
 ```shell
+#cp -r ../../ ../../project_backup/
 #cp: cannot copy a directory, '../../../project/', into itself, '../../project_backup/project'
 #cp는 재귀적으로 작동해서 스스로를 계속 복사하게 되므로 성립안됨.
+```
+1.(수정)main폴더 안의 내용을 ../../project_backup/으로 복사하시오.
+```shell
+cp -r ./* ../../project_backup/
 ```
 2. utils/ 디렉토리의 모든 .py 파일을 현재 디렉토리의 models/ 디렉토리로 복사하시오.
 ```shell
