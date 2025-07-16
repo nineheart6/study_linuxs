@@ -9,3 +9,5 @@
 - Searching Command Linux : [명령어](codes/cd_pwd_ls.sh)
 
 - basic_powershell_commands : [명령어](codes/quests/basic_linux_commands.md)
+
+- basic_linux_commands : [명령어](codes/quests/20_basic_more_linux_commands.md)
