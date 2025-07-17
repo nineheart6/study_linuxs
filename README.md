@@ -15,3 +15,5 @@
 - relative_path_linux_commands : [명령어](codes/quests/relative_path_commands.md)
 
 - wildcard_linux_commands : [명령어](codes/quests/40_linux_wildcard_practice.md)
+
+- file_management_wildcard_practice : [명령어](codes/quests/41_linux_file_management_wildcard_practice.md)
