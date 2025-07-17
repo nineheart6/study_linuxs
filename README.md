@@ -13,3 +13,5 @@
 - basic_linux_commands : [명령어](codes/quests/20_basic_more_linux_commands.md)
 
 - relative_path_linux_commands : [명령어](codes/quests/relative_path_commands.md)
+
+- wildcard_linux_commands : [명령어](codes/quests/40_linux_wildcard_practice.md)
