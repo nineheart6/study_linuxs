@@ -336,6 +336,9 @@ rm \*.tmp
 \# 4\. 시스템 로그들을 logs/system 디렉터리로 이동
 
 \# 명령어들을 작성하세요:
+mv *2024.txt ./logs/2024 && \
+mv *error.txt ./logs/errors && \
+mv *system.txt ./logs/system
 
 ### 7-3. 개발 환경 정리 시나리오
 
@@ -350,6 +353,11 @@ rm \*.tmp
 \# 4\. 데이터 파일들(\*.csv, \*.dat)을 data 디렉터리로 이동
 
 \# 명령어들을 작성하세요:
+
+mv *.sh ./scripts/ && \
+cp *.{conf,config} ./config/ && \
+mv *.{md,txt} ./docs/ && \
+mv *.{csv,dat} ./data/
 
 ---
 
@@ -374,6 +382,8 @@ mv *.{md,txt} ./docs
 \# 존재하지 않으면 디렉터리를 생성한 후 이동하는 명령어를 작성하세요
 
 \# 명령어를 작성하세요: 
+mkdir -p ./images/ && \
+mv *.jpg ./images/
 
 ### 8-3. 파일 개수 확인 후 실행
 
@@ -383,6 +393,7 @@ mv *.{md,txt} ./docs
 
 \# 명령어를 작성하세요:
 
+[ $(ls -1 *.txt 2>/dev/null | wc -l) -gt 5 ] && mkdir -p backup || echo "파일이 부족합니다"
 ---
 
 ## 9\. 검증 명령어
