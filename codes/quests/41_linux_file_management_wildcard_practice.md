@@ -182,7 +182,7 @@ ls ./data/
 
 \# 힌트: 확장자가 .jpg, .png, .gif, .txt, .csv, .tar, .dat, .pdf, .ppt, .xls가 아닌 파일
 
-\# 명령어를 작성하세요: 
+\# 명령어를 작성하세요: rm *.??? && ls
 
 ---
 
@@ -192,34 +192,73 @@ ls ./data/
 
 \# 1단계: 모든 이미지 파일(.jpg, .png, .gif)을 images 디렉터리로 이동
 
+mv *.{jpg,png,gif} ./images/
+
 \# 2단계: 모든 문서 파일(.pdf, .ppt, .xls, .md)을 documents 디렉터리로 이동
+
+mv *.{pdf,ppt,xls,md} ./documents/
 
 \# 3단계: 모든 데이터 파일(.csv, .dat)을 data 디렉터리로 이동 (없으면 생성)
 
-\# 명령어들을 작성하세요:
+mv *.{csv,dat} ./data/
+
+\# 명령어들을 작성하세요: 
+
+mv *.{jpg,png,gif} ./images/ && \
+mv *.{pdf,ppt,xls,md} ./documents/ && \
+mv *.{csv,dat} ./data/ && \
+ls ./{images,documents,data}/
 
 ### 5-2. 백업 및 정리 작업
 
 \# 1단계: 모든 .txt 파일을 backup/txt\_files 디렉터리로 복사 (디렉터리 생성 필요)
 
+mkdir ./backup/txt\_files && \
+cp *.txt ./backup/txt\_files 
+
 \# 2단계: 모든 설정 파일(.conf)을 backup/config 디렉터리로 복사
+
+mkdir ./backup/config && \
+cp *.conf ./backup/config 
 
 \# 3단계: 원본 설정 파일들을 삭제
 
+rm *.{txt,conf}
+
 \# 명령어들을 작성하세요:
+-> 백업으로 들어가지 않은 이유: 파일의 복사 경로, 삭제를 생각하면 비슷해 보여서
+mkdir ./backup/{txt\_files,config} && \
+cp *.txt ./backup/txt\_files && \
+cp *.conf ./backup/config && \
+rm *.{txt,conf} && \
+ls ./backup/{txt\_files,config}
 
 ### 5-3. 날짜별 로그 정리
 
 \# 1단계: logs 디렉터리에 error, access, system 하위 디렉터리 생성
 
+mkdir ./logs/{error,access,system} 
+
 \# 2단계: log\_error.txt를 logs/error/로 이동
+
+mv log\_error.txt logs/error/
 
 \# 3단계: log\_access.txt를 logs/access/로 이동
 
+mv log\_access.txt logs/access/
+
 \# 4단계: log\_system.txt를 logs/system/로 이동
+
+mv log\_system.txt logs/system/
 
 \# 명령어들을 작성하세요:
 
+cd ./logs && \
+mkdir {error,access,system} && \
+mv ../log\_error.txt ./error/ && \
+mv ../log\_access.txt ./access/ && \
+mv ../log\_system.txt ./system/ && \
+ls ./
 ---
 
 ## 6\. 고급 와일드카드 실습
@@ -229,18 +268,24 @@ ls ./data/
 \# "report" 또는 "data"로 시작하고 숫자가 포함된 모든 파일을 찾아서 processed 디렉터리로 복사하세요
 
 \# 명령어를 작성하세요:
+mkdir processed && \
+cp {report,data}*[0-9]* ./processed/
 
 ### 6-2. 제외 패턴 활용
 
 \# 모든 파일 중에서 "final\_"로 시작하지 않는 .txt 파일들을 draft 디렉터리로 이동하세요
 
-\# 명령어를 작성하세요:
+\# 명령어를 작성하세요: 
+
 
 ### 6-3. 범위 지정 패턴
 
 \# 파일명에 001부터 009까지의 숫자가 포함된 파일들을 single\_digit 디렉터리로 복사하세요
 
 \# 명령어를 작성하세요:
+
+mkdir single\_digit && \
+cp *00[0-9]* ./single\_digit/
 
 ---
 
@@ -252,11 +297,22 @@ ls ./data/
 
 \# 1\. 완료된 리포트 파일들(report\*.txt)을 completed 디렉터리로 이동
 
+mkdir ./completed && \
+mv report\*.txt ./completed/
+
 \# 2\. 작업 중인 파일들(temp\*, \*\_draft)을 ongoing 디렉터리로 이동
+
+mkdir ./ongoing && \
+mv temp\* ./ongoing/ && \
+mv \*\_draft ./ongoing/ && \
 
 \# 3\. 백업 파일들(backup\_\*)을 archive 디렉터리로 이동
 
+mv backup\_\* ./archive/ && \
+
 \# 4\. 불필요한 임시 파일들(\*.tmp)을 삭제
+
+rm \*.tmp
 
 \# 명령어들을 작성하세요:
 
@@ -375,4 +431,3 @@ ls \*.txt                 \# 선택될 파일들 미리 확인
 - `?` 단일 문자 활용: `file?.txt`  
 - 복합 패턴 활용: `*[0-9]*`, `file[1-3].txt`  
 - 디렉터리 생성 시 `-p` 옵션 활용: `mkdir -p path/to/directory`
-
