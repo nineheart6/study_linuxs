@@ -315,6 +315,12 @@ mv backup\_\* ./archive/ && \
 rm \*.tmp
 
 \# 명령어들을 작성하세요:
+mkdir ./completed ./ongoing && \
+mv report\*.txt ./completed/ && \
+mv temp\* ./ongoing/ && \
+mv \*\_draft ./ongoing/ && \
+mv backup\_\* ./archive/ && \
+rm \*.tmp
 
 ### 7-2. 로그 관리 시나리오
 
