@@ -117,5 +117,24 @@ ls && \
 cd ../
 ```
 
-- 
+### 전체 결과
+
+```bash
+[seungjae@localhost shell_practice]$ tree
+.
+├── backup
+├── backup.sh
+├── config.conf
+├── data.txt
+├── logs
+│   └── access.log
+├── notes.md
+├── projects
+│   └── readme.txt
+├── scripts
+├── sever.conf
+└── sysinfo.sh
+
+4 directories, 8 files
+``` 
 
