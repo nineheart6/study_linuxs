@@ -252,13 +252,14 @@ mv log\_access.txt logs/access/
 mv log\_system.txt logs/system/
 
 \# 명령어들을 작성하세요:
-
+```bash
 cd ./logs && \
 mkdir {error,access,system} && \
 mv ../log\_error.txt ./error/ && \
 mv ../log\_access.txt ./access/ && \
 mv ../log\_system.txt ./system/ && \
 ls ./
+```
 ---
 
 ## 6\. 고급 와일드카드 실습
@@ -276,7 +277,7 @@ cp {report,data}*[0-9]* ./processed/
 \# 모든 파일 중에서 "final\_"로 시작하지 않는 .txt 파일들을 draft 디렉터리로 이동하세요
 
 \# 명령어를 작성하세요: 
-
+mv {report,license}.txt ./draft
 
 ### 6-3. 범위 지정 패턴
 
@@ -362,7 +363,9 @@ rm \*.tmp
 
 \# 한 줄의 명령어로 실행하세요 (세미콜론 또는 && 사용)
 
-\# 명령어를 작성하세요:
+\# 명령어를 작성하세요: 
+mv *.{img,png,gif} ./images && \
+mv *.{md,txt} ./docs 
 
 ### 8-2. 조건부 실행
 
@@ -370,7 +373,7 @@ rm \*.tmp
 
 \# 존재하지 않으면 디렉터리를 생성한 후 이동하는 명령어를 작성하세요
 
-\# 명령어를 작성하세요:
+\# 명령어를 작성하세요: 
 
 ### 8-3. 파일 개수 확인 후 실행
 
