@@ -18,4 +18,6 @@
 
 - file_management_wildcard_practice : [명령어](codes/quests/41_linux_file_management_wildcard_practice.md)
 
--linux_permission_command : [명령어](codes/quests/51_linux_practice_problems.md)
+- linux_permission_command : [명령어](codes/quests/51_linux_practice_problems.md)
+
+- linux_Manage-permissions.md : [명령어](codes/quests/52_linux_Manage-permissions.md)
