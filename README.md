@@ -23,3 +23,5 @@
 - linux_Manage-permissions : [명령어](codes/quests/52_linux_Manage-permissions.md)
 
 - profiles_env : [명령어](codes/quests/60_profiles_env.md)
+
+- useful_text_controls: [명령어](codes/quests/71_useful_text_controls.md)
