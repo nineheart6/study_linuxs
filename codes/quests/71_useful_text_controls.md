@@ -440,7 +440,13 @@ Lisa:28:Seoul:Analyst
 * \# /etc/passwd 파일에서 실제 사용자(홈 디렉토리가 /home으로 시작)만 추출하여 사용자명 순으로 정렬하세요
 * \# 명령어를 작성하세요
 ```bash
-
+[seungjae@localhost text_processing_practice]$ grep /home/ /etc/passwd | cut -d":" -f1 | sort
+alice
+bob
+charlie
+diana
+eve
+seungjae
 ```
 
 **12-3.** 설정 파일 백업 및 비교
@@ -448,6 +454,14 @@ Lisa:28:Seoul:Analyst
 * \# employees.txt 파일을 백업하고, 원본에서 한 줄을 수정한 후 차이점을 확인하세요  
 * \# 명령어들을 순서대로 작성하세요  
 ```bash
+[seungjae@localhost text_processing_practice]$ cp employees.txt employeesback_up.txt
+[seungjae@localhost text_processing_practice]$ nano employees.txt
+
+[seungjae@localhost text_processing_practice]$ diff employees.txt employeesback_up.txt
+5c5
+< sa:28:Seoul:Analyst
+---
+> Lisa:28:Seoul:Analyst
 
 ```    
   ---
