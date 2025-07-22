@@ -20,4 +20,6 @@
 
 - linux_permission_command : [명령어](codes/quests/51_linux_practice_problems.md)
 
-- linux_Manage-permissions.md : [명령어](codes/quests/52_linux_Manage-permissions.md)
+- linux_Manage-permissions : [명령어](codes/quests/52_linux_Manage-permissions.md)
+
+- profiles_env : [명령어](codes/quests/60_profiles_env.md)
