@@ -47,9 +47,22 @@
 ```bash
 [seungjae@localhost Downloads]$ nano create_file.sh
 
+#일반
 V_FILENAME="$1"
 V_FILETEXT="$2" 
-echo "$V_FILETEXT" > "./$V_FILENAME" && echo "welcome.txt 파일이 성공적으로 생성되었습니다."
+echo "$V_FILETEXT" > "./$V_FILENAME" 
+echo "welcome.txt 파일이 성공적으로 생성되었습니다."
+
+#if문 사용
+V_FILENAME="$1"
+V_FILETEXT="$2" 
+if [ "$#" = 2 ]; then
+        echo "$V_FILETEXT" > "./$V_FILENAME" && \ 
+        echo "welcome.txt 파일이 성공적으로 생성되었습니다."
+else
+        echo "ERROR"
+fi
+
 
 [seungjae@localhost Downloads]$ source create_file.sh welcome.txt "Hello Linux Learners!"
 welcome.txt 파일이 성공적으로 생성되었습니다.
