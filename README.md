@@ -24,4 +24,6 @@
 
 - profiles_env : [명령어](codes/quests/60_profiles_env.md)
 
-- useful_text_controls: [명령어](codes/quests/71_useful_text_controls.md)
+- useful_text_controls : [명령어](codes/quests/71_useful_text_controls.md)
+
+- shell_script_variables : [명령어](codes/quests/80_1_shell_script_variables.md)
