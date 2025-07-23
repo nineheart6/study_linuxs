@@ -52,7 +52,7 @@ echo "welcome.txt 파일이 성공적으로 생성되었습니다."
 V_FILENAME="$1"
 V_FILETEXT="$2" 
 if [ "$#" = 2 ]; then
-        echo "$V_FILETEXT" > "./$V_FILENAME" && \ 
+        echo "$V_FILETEXT" > "./$V_FILENAME"  
         echo "welcome.txt 파일이 성공적으로 생성되었습니다."
 else
         echo "ERROR"
