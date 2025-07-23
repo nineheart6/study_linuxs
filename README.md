@@ -26,4 +26,4 @@
 
 - useful_text_controls : [명령어](codes/quests/71_useful_text_controls.md)
 
-- shell_script_variables : [명령어](codes/quests/80_1_shell_script_variables.md)
+- shell_script_variables : [명령어1](codes/quests/80_1_shell_script_variables.md) [명령어2](codes/quests/80_2_shell_variables_read.md)

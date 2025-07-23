@@ -53,6 +53,7 @@ V_FILENAME="$1"
 V_FILETEXT="$2" 
 if [ "$#" = 2 ]; then
         echo "$V_FILETEXT" > "./$V_FILENAME"  
+>>>>>>> 21b07ce7c983aa3a0d9c2b008d57f79404a7eafd
         echo "welcome.txt 파일이 성공적으로 생성되었습니다."
 else
         echo "ERROR"
