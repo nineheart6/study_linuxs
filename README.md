@@ -28,4 +28,6 @@
 
 - shell_script_variables : [명령어1](codes/quests/80_1_shell_script_variables.md) [명령어2](codes/quests/80_2_shell_variables_read.md)
 
--shell_variables : [명령어](codes/quests/80_3_shell_variables.md)
+- shell_variables : [명령어](codes/quests/80_3_shell_variables.md)
+
+- ssh_vims : [명령어](codes/quests/10_2_ssh_vims.md)
