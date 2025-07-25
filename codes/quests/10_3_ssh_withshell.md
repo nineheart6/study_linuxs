@@ -12,28 +12,17 @@ cd \~/shell\_practice
 
 #### **students.txt 파일 생성**
 
-cat \> students.txt \<\< EOF
-
+cat > students.txt << EOF
 김철수:수학:85:영어:92:과학:78
-
 이영희:수학:95:영어:88:과학:91
-
 박민수:수학:76:영어:79:과학:82
-
 최지원:수학:88:영어:95:과학:89
-
 정우진:수학:92:영어:76:과학:94
-
 김지현:수학:83:영어:91:과학:87
-
 이준호:수학:79:영어:84:과학:76
-
 박서연:수학:97:영어:93:과학:96
-
 한도윤:수학:81:영어:77:과학:83
-
 송민재:수학:86:영어:89:과학:91
-
 EOF
 
 #### **server\_logs.txt 파일 생성**
@@ -157,8 +146,12 @@ EOF
 ```bash
 #!/bin/bash
 
+#과목 받기
 read -p "subject: " V_SUBJECT
+#1. 사용자가 입력한 과목이 유효한지 검사 (수학, 영어, 과학)
 if [ "$V_SUBJECT" = "수학" ]; then
+        #2. 해당 과목의 모든 점수를 추출하여 정렬된 목록 출력 
+        # -> temp_math.txt에 저장.
         cut -d":" -f3 students.txt | sort -nr > temp_math.txt
         cat temp_math.txt
         echo "high" && cat temp_math.txt | head -1
@@ -166,9 +159,11 @@ if [ "$V_SUBJECT" = "수학" ]; then
         #average
         average=$(cat temp_math.txt | awk '{sum+=$1} END {print sum/NR}')
         echo "average $average"
+        #정규식 앞이 9로 시작
         echo "A" && cat temp_math.txt | grep "^9" | wc -l
         echo "B" && cat temp_math.txt | grep "^8" | wc -l
         echo "C" && cat temp_math.txt | grep "^7" | wc -l
+        #'.' 뒤를 생략해서 정수로.
         int_average=$(echo "$average" | cut -d'.' -f1)
         if [ "$int_average" -ge 85 ]; then
                 echo "우수"
@@ -178,7 +173,8 @@ if [ "$V_SUBJECT" = "수학" ]; then
                 echo "보통"
         fi
 elif [ "$V_SUBJECT" = "영어" ]; then
-        echo "test"
+        #같이 풀어보기
+
 elif [ "$V_SUBJECT" = "과학" ]; then
         echo "test"
 else
