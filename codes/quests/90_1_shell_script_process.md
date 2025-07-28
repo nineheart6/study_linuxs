@@ -57,6 +57,10 @@ elif [ "$V_STATUS" == "stop" ]; then
         #로그
 elif [ "$V_STATUS" == "tail_log" ]; then
         tail -f "$V_LOGFILE"
+elif [ "$V_STATUS" == "restart" ]; then
+        kill -9 "$V_PID"
+        nohup python3 -m http.server "$V_PORT" --bind 0.0.0.0 &>> "$V_LOGFILE" &
+        echo "server restart from background"
 else
         echo
 fi
