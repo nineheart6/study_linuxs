@@ -41,6 +41,7 @@ V_PORT=8000
 V_PROC="$(ps aux | grep "http.server")"
 V_LOGFILE="server.log"
 #echo ""없이 출력시 공백문자를 1개까지 모두 생략
+#tr -s와 동일 동작?
 V_PID="$(echo $V_PROC | cut -d" " -f2)"
 
 #시작
