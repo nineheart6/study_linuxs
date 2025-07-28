@@ -34,4 +34,4 @@
 
 - ssh_withshell : [명령어](codes/quests/10_3_ssh_withshell.md)
 
--
+- shell_script_process : [명령어](codes/quests/90_1_shell_script_process.md)
